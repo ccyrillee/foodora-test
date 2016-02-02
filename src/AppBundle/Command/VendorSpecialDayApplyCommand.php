@@ -118,13 +118,6 @@ class VendorSpecialDayApplyCommand extends ContainerAwareCommand
         file_put_contents('/tmp/foodora.sql', implode("\n", $this->collectSql));
     }
 
-    protected function flush() {
-        /** @var EntityManager $em */
-        $em = $this->getContainer()->get('doctrine.orm.default_entity_manager');
-
-        $em->flush();
-    }
-
     /**
      * @param VendorSpecialDay $specialSchedule
      */
