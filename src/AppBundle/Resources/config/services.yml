@@ -1,0 +1,7 @@
+services:
+    app.db.vendor_special_day:
+        class: AppBundle\Service\Db\VendorSpecialDayDb
+        arguments: ["@doctrine.orm.default_entity_manager"]
+    app.db.vendor_schedule:
+        class: AppBundle\Service\Db\VendorScheduleDb
+        arguments: ["@doctrine.orm.default_entity_manager"]
